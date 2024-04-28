@@ -6,6 +6,7 @@ const Home = ({ page }) => {
     <section className="hero" style={{ backgroundImage: `url(${bg})` }}>
       <div className="content">
         <h1>Home</h1>
+        <h2>Technical skills</h2>
         <p>get ready to transform your react app</p>
         <a href="*">start now</a>
       </div>

@@ -85,3 +85,41 @@
   padding: 12px 24px;
   border-radius: 10px;
 }
+.project {
+  display: flex;
+  height: 100vh;
+
+  background-size: cover;
+  box-shadow: inset 0 0 0 2000px rgba(0, 0, 0, 0.5);
+}
+
+.contP {
+  display: flex;
+  flex-direction: column;
+  max-width: 1200px;
+  width: 100%;
+  margin: 0 auto;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  color: white;
+}
+.contP h1 {
+  font-size: 56px;
+  font-weight: bolder;
+}
+
+.contP p {
+  font-size: 22px;
+  margin: 15px 0;
+  max-width: 550px;
+  letter-spacing: 2px;
+}
+
+.contP a {
+  color: inherit;
+  text-decoration: none;
+  background-color: purple;
+  padding: 12px 24px;
+  border-radius: 10px;
+}

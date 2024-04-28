@@ -10,7 +10,7 @@ export default function ButtonAppBar() {
   return (
     <Box sx={{ flexGrow: 1 }}>
       <AppBar
-        style={{ placeItems: "end", backgroundColor: "1C2221" }}
+        style={{ placeItems: "end", backgroundColor: "black" }}
         position="absolute"
       >
         <Toolbar>
