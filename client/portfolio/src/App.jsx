@@ -1,6 +1,8 @@
 import Projects from "./Components/Projects";
 import Home from "./Components/Home";
 import Post from "./Components/Post";
+import ButtonAppBar from "./Components/Navbar";
+import ErrorBoundary from "./Components/ErrorBoundary";
 import axios from "axios";
 import { Routes, Route } from "react-router-dom";
 import { useState, createContext, useEffect } from "react";
@@ -11,14 +13,15 @@ export const BASE_URL = "http://localhost:3001/users";
 function App() {
   return (
     <>
-      <div>
-        <h1>portfolio</h1>
-        <Home />
-        <Projects />
-        <Post />
-      </div>
+      <ErrorBoundary>
+        <ButtonAppBar />
+        <Routes>
+          <Route path="/Projects" element={<Projects page={" Projects "} />} />
+          <Route path="/" element={<Home page={" Home "} />} />
+          <Route path="/Post" element={<Home page={" Post "} />} />
+        </Routes>
+      </ErrorBoundary>
     </>
   );
 }
-
 export default App;
