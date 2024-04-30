@@ -16,9 +16,9 @@ function App() {
       <ErrorBoundary>
         <ButtonAppBar />
         <Routes>
-          <Route path="/Projects" element={<Projects page={" Projects "} />} />
+          <Route path="/Projects" element={<Projects page={"Projects "} />} />
           <Route path="/" element={<Home page={" Home "} />} />
-          <Route path="/Post" element={<Home page={" Post "} />} />
+          <Route path="/Post" element={<Post page={" Post "} />} />
         </Routes>
       </ErrorBoundary>
     </>
