@@ -123,3 +123,19 @@
   padding: 12px 24px;
   border-radius: 10px;
 }
+.icon-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 20px; /* Adjust as needed */
+}
+
+.icon-container > * {
+  margin: 0 10px; /* Adjust spacing between icons */
+  cursor: pointer; /* Change cursor to pointer when hovered */
+  transition: transform 0.3s ease; /* Add smooth transition effect */
+}
+
+.icon-container > *:hover {
+  transform: translateY(-5px); /* Move the icon up when hovered */
+}
