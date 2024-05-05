@@ -31,6 +31,7 @@ const Home = ({ page }) => {
           <SiPostgresql size={64} />
           <FaGithub size={64} />
         </div>
+
         <p>Get ready to transform your React app</p>
         <a href="*">Start now</a>
       </div>
