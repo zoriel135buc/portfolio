@@ -31,7 +31,7 @@
   align-items: center;
   text-align: center;
   color: white;
-  margin-top: 50px;
+  margin-top: 80px;
 }
 .contP {
   display: flex;
@@ -52,10 +52,19 @@
   width: 100%;
 }
 
-.content h1 {
+.icon-hobbies {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 100%;
+  margin: 10px; /* Increase the space between icons */
+}
+
+.content h3 {
+  color: burlywood;
   padding-bottom: 10px;
-  margin: 10px;
-  font-size: 60px;
+  margin: 5px; /* Adjust margin as needed */
+  font-size: 30px;
   font-weight: bolder;
 }
 
@@ -73,11 +82,11 @@
   font-weight: bolder;
 }
 
-.content h2 {
-  padding: 30px;
-  padding-top: 150px;
-  font-size: 30px;
-  font-weight: bolder;
+.content p {
+  padding: 0px;
+  padding-top: 360px;
+  font-size: 20px;
+  letter-spacing: 2px;
 }
 .contP p {
   font-size: 22px;
@@ -86,12 +95,6 @@
   letter-spacing: 2px;
 }
 
-.content p {
-  font-size: 22px;
-  margin: 30px 0;
-  max-width: 550px;
-  letter-spacing: 2px;
-}
 .contP a {
   color: inherit;
   text-decoration: none;
@@ -126,10 +129,19 @@
 }
 
 .icon2 > * {
-  margin: 0px 100px; /* Adjust spacing between icons */
+  margin: 0px 90px; /* Adjust spacing between icons */
   cursor: pointer; /* Change cursor to pointer when hovered */
   transition: transform 0.3s ease;
 }
 .icon2 > *:hover {
   transform: translateY(-5px); /* Move the icon up when hovered */
+}
+.icon-hobbies > * {
+  padding-right: 130px;
+  margin: 0px 100px; /* Adjust spacing between icons */
+  cursor: pointer; /* Change cursor to pointer when hovered */
+  transition: transform 0.3s ease;
+}
+.icon-text {
+  letter-spacing: 1px;
 }

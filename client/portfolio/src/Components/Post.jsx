@@ -41,7 +41,17 @@ const Post = ({ page }) => {
   return (
     <div>
       <h2>Contact</h2>
-      <Box component={"form"} sx={{ m: 1 }} autoComplete="off">
+      <Box
+        component={"form"}
+        sx={{
+          m: 20,
+          display: "flex",
+          flexDirection: "column",
+          justifyContent: "center",
+          alignItems: "center",
+        }}
+        autoComplete="off"
+      >
         <TextField
           sx={{ m: 1 }}
           id="email"
@@ -81,9 +91,26 @@ const Post = ({ page }) => {
           onChange={(e) => setLastName(e.target.value)}
         />
       </Box>
-      <Button onClick={PostDea} variant="contained">
-        Post
-      </Button>
+      <div
+        style={{
+          display: "flex",
+          justifyContent: "center",
+          marginTop: "10px",
+        }}
+      >
+        <Button
+          sx={{
+            alignItems: "center",
+            display: "flex",
+            justifyContent: "center",
+            flexDirection: "column",
+          }}
+          onClick={PostDea}
+          variant="contained"
+        >
+          Post
+        </Button>
+      </div>
       <div>{err}</div>
     </div>
   );

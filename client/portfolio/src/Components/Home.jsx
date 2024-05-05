@@ -15,12 +15,24 @@ import { FaClockRotateLeft } from "react-icons/fa6";
 import { VscTerminalCmd } from "react-icons/vsc";
 import p from "../assets/p.jpg";
 import { blue } from "@mui/material/colors";
+import Header from "./Header";
+import { FaMusic } from "react-icons/fa6";
+import { FaBasketballBall } from "react-icons/fa";
+import { FaUserFriends } from "react-icons/fa";
 
-const Home = ({ page }) => {
+const Home = () => {
   return (
     <section className="hero" style={{ backgroundImage: `url(${bg})` }}>
       <div className="content">
-        <h2 style={{ color: "blueviolet" }}>Technical skills</h2>
+        <p style={{ color: "blueviolet", marginTop: "0px" }}>
+          Hi, I'm <strong>Zoriel</strong> , a Software Engineer with a passion
+          for crafting exceptional front-end experiences. Currently based in{" "}
+          <span></span>
+          <strong>Jerusalem , Israel</strong> , I'm a Full-stack Developer,
+          where I bring innovative solutions to life through code and
+          creativity.
+        </p>
+        <h3>technical skills</h3>
         <div className="icon-container">
           <SiMui size={30} />
           <FaBootstrap size={30} />
@@ -38,7 +50,7 @@ const Home = ({ page }) => {
         <div
           style={{
             backgroundImage: `url(${p})`,
-            margin: "10px",
+            margin: "0px",
             display: "flex",
             width: "100vw",
             textAlign: "center",
@@ -47,7 +59,7 @@ const Home = ({ page }) => {
             backgroundSize: "cover",
             backgroundRepeat: "no-repeat",
             backgroundPosition: "center",
-            height: "30vh",
+            height: "20vh",
             boxShadow: "inset 0 0 0 2000px rgba(0, 0, 0, 0.5)",
           }}
         >
@@ -73,8 +85,40 @@ const Home = ({ page }) => {
             </div>
           </div>
         </div>
-        <div>
-          <h3>Hobbies</h3>
+        <div
+          style={{
+            backgroundImage: `url(${p})`,
+            margin: "0px",
+            display: "flex",
+            width: "100vw",
+            textAlign: "center",
+            justifyItems: "center",
+            justifyContent: "center",
+            backgroundSize: "cover",
+            backgroundRepeat: "no-repeat",
+            backgroundPosition: "center",
+            height: "20vh",
+            boxShadow: "inset 0 0 0 2000px rgba(0, 0, 0, 0.5)",
+          }}
+        ></div>
+        <h2
+          style={{ margin: "10px", marginRight: "50px", color: "blueviolet" }}
+        >
+          Hobbies
+        </h2>
+        <div className="icon-hobbies">
+          <div className="icon-text">
+            <FaMusic size={50} color="blue" />
+            <h4>Graduated from academic music studies</h4>
+          </div>
+          <div className="icon-text">
+            <FaBasketballBall size={50} color="blue" />
+            <h4>I played basketball at a professional level</h4>
+          </div>
+          <div className="icon-text">
+            <FaUserFriends size={50} color="blue" />
+            <h4>Meetings with friends</h4>
+          </div>
         </div>
       </div>
     </section>
