@@ -12,7 +12,28 @@
   box-shadow: inset 0 0 0 2000px rgba(0, 0, 0, 0.5);
 }
 
+.project {
+  display: flex;
+  height: 100vh;
+  background-size: cover;
+  box-shadow: inset 0 0 0 2000px rgba(0, 0, 0, 0.5);
+}
+
 .content {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  max-width: 1200px;
+  width: 100%;
+  height: 40vh;
+  margin: 0 auto;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  color: white;
+  margin-top: 50px;
+}
+.contP {
   display: flex;
   flex-direction: column;
   max-width: 1200px;
@@ -23,15 +44,28 @@
   text-align: center;
   color: white;
 }
+.icon2 {
+  padding: 30px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 100%;
+}
 
 .content h1 {
+  padding-bottom: 10px;
+  margin: 10px;
+  font-size: 60px;
+  font-weight: bolder;
+}
+
+.contP h1 {
   padding-top: 20px;
   margin: 50px;
   font-size: 60px;
   font-weight: bolder;
 }
-
-.content h2 {
+.contP h2 {
   padding: 40px;
   padding-top: 10px;
   margin: 10px;
@@ -39,11 +73,31 @@
   font-weight: bolder;
 }
 
-.content p {
+.content h2 {
+  padding: 30px;
+  padding-top: 150px;
+  font-size: 30px;
+  font-weight: bolder;
+}
+.contP p {
   font-size: 22px;
   margin: 15px 0;
   max-width: 550px;
   letter-spacing: 2px;
+}
+
+.content p {
+  font-size: 22px;
+  margin: 30px 0;
+  max-width: 550px;
+  letter-spacing: 2px;
+}
+.contP a {
+  color: inherit;
+  text-decoration: none;
+  background-color: purple;
+  padding: 12px 24px;
+  border-radius: 10px;
 }
 
 .content a {
@@ -58,14 +112,11 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  margin-bottom: 20px; /* Adjust as needed */
-  border-bottom: 1px solid #ccc; /* Add bottom border */
-  padding-bottom: 10px; /* Add padding to separate border from icons */
-  width: 100%; /* Set width to 100% */
+  margin-bottom: 30px; /* Adjust as needed */
 }
 
 .icon-container > * {
-  margin: 10px 10px; /* Adjust spacing between icons */
+  margin: 0 30px; /* Adjust spacing between icons */
   cursor: pointer; /* Change cursor to pointer when hovered */
   transition: transform 0.3s ease; /* Add smooth transition effect */
 }
@@ -74,9 +125,11 @@
   transform: translateY(-5px); /* Move the icon up when hovered */
 }
 
-.content > p {
-  border-top: 1px solid #ccc; /* Add top border to paragraph */
-  padding-top: 10px; /* Add padding to separate border from text */
-  margin-top: 20px; /* Add margin to create space between sections */
-  width: 100%; /* Set width to 100% */
+.icon2 > * {
+  margin: 0px 100px; /* Adjust spacing between icons */
+  cursor: pointer; /* Change cursor to pointer when hovered */
+  transition: transform 0.3s ease;
+}
+.icon2 > *:hover {
+  transform: translateY(-5px); /* Move the icon up when hovered */
 }

@@ -30,6 +30,9 @@ export default function ButtonAppBar() {
             <Button component={Link} to="/projects" color="inherit">
               Projects
             </Button>
+            <Button component={Link} to="/post" color="inherit">
+              contact
+            </Button>
           </div>
 
           {/* Single Button wrapper for both "Home" and "Projects" */}
