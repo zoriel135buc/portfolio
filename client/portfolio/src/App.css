@@ -1,3 +1,4 @@
+/* App.css */
 * {
   margin: 0;
   padding: 0;
@@ -5,34 +6,49 @@
   font-family: Arial, Helvetica, sans-serif;
 }
 
+@media screen and (max-width: 768px) {
+  .icon-text {
+    margin: 10px; /* Reduce spacing around each icon for smaller screens */
+  }
+
+  .header p {
+    margin: 10px; /* Reduce margin for smaller screens */
+    font-size: 14px; /* Adjust font size for smaller screens */
+  }
+}
+
 .hero {
-  display: flex;
-  height: 100vh;
+  position: relative;
+  height: calc(100vh - 55px); /* Adjust the height of the hero section */
   background-size: cover;
-  box-shadow: inset 0 0 0 2000px rgba(0, 0, 0, 0.5);
+  background-repeat: no-repeat;
+  background-position: center;
+  overflow: hidden;
+  box-shadow: inset 0 0 0 2000px rgba(0, 0, 0, 0.3);
+  margin-top: 55px; /* Adjust margin-top to create space for the fixed navbar */
 }
 
 .project {
-  display: flex;
-  height: 100vh;
+  position: relative;
+  height: calc(100vh - 55px); /* Adjust the height of the hero section */
   background-size: cover;
-  box-shadow: inset 0 0 0 2000px rgba(0, 0, 0, 0.5);
+  background-repeat: no-repeat;
+  background-position: center;
+  overflow: hidden;
+  box-shadow: inset 0 0 0 2000px rgba(0, 0, 0, 0.3);
+  margin-top: 55px; /* Adjust margin-top to create space for the fixed navbar */
 }
 
 .content {
-  position: relative;
-  display: flex;
-  flex-direction: column;
-  max-width: 1200px;
-  width: 100%;
-  height: 40vh;
-  margin: 0 auto;
-  justify-content: center;
-  align-items: center;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
   text-align: center;
   color: white;
-  margin-top: 80px;
+  z-index: 1; /* Ensure content stays above the hero background */
 }
+
 .contP {
   display: flex;
   flex-direction: column;
@@ -44,28 +60,26 @@
   text-align: center;
   color: white;
 }
+
+.icon-container,
 .icon2 {
-  padding: 30px;
+  padding: 10px;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   width: 100%;
 }
 
-.icon-hobbies {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  width: 100%;
-  margin: 10px; /* Increase the space between icons */
+.icon2 > *,
+.icon-container > * {
+  margin: 20px 20px; /* Adjust spacing between icons */
+  cursor: pointer; /* Change cursor to pointer when hovered */
+  transition: transform 0.3s ease; /* Add smooth transition effect */
 }
 
-.content h3 {
-  color: burlywood;
-  padding-bottom: 10px;
-  margin: 5px; /* Adjust margin as needed */
-  font-size: 30px;
-  font-weight: bolder;
+.icon2 > *:hover,
+.icon-container > *:hover {
+  transform: translateY(-5px); /* Move the icon up when hovered */
 }
 
 .contP h1 {
@@ -74,6 +88,7 @@
   font-size: 60px;
   font-weight: bolder;
 }
+
 .contP h2 {
   padding: 40px;
   padding-top: 10px;
@@ -82,12 +97,6 @@
   font-weight: bolder;
 }
 
-.content p {
-  padding: 0px;
-  padding-top: 360px;
-  font-size: 20px;
-  letter-spacing: 2px;
-}
 .contP p {
   font-size: 22px;
   margin: 15px 0;
@@ -95,53 +104,48 @@
   letter-spacing: 2px;
 }
 
-.contP a {
-  color: inherit;
-  text-decoration: none;
-  background-color: purple;
-  padding: 12px 24px;
-  border-radius: 10px;
-}
-
-.content a {
-  color: inherit;
-  text-decoration: none;
-  background-color: purple;
-  padding: 12px 24px;
-  border-radius: 10px;
-}
-
-.icon-container {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin-bottom: 30px; /* Adjust as needed */
-}
-
-.icon-container > * {
-  margin: 0 30px; /* Adjust spacing between icons */
-  cursor: pointer; /* Change cursor to pointer when hovered */
-  transition: transform 0.3s ease; /* Add smooth transition effect */
-}
-
-.icon-container > *:hover {
-  transform: translateY(-5px); /* Move the icon up when hovered */
-}
-
-.icon2 > * {
-  margin: 0px 90px; /* Adjust spacing between icons */
-  cursor: pointer; /* Change cursor to pointer when hovered */
-  transition: transform 0.3s ease;
-}
-.icon2 > *:hover {
-  transform: translateY(-5px); /* Move the icon up when hovered */
-}
-.icon-hobbies > * {
-  padding-right: 130px;
-  margin: 0px 100px; /* Adjust spacing between icons */
-  cursor: pointer; /* Change cursor to pointer when hovered */
-  transition: transform 0.3s ease;
-}
 .icon-text {
-  letter-spacing: 1px;
+  text-align: center; /* Center the text */
+  margin: 5px; /* Adjust the spacing around each icon */
+}
+
+.header {
+  margin-top: 10px;
+  margin: 0px;
+}
+.header h3 {
+  margin: 5px;
+  color: blue;
+}
+
+.icon2 {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+
+.icon-item {
+  flex: 1 1 30%; /* Adjust width for different screen sizes */
+  text-align: center;
+  margin: 10px; /* Adjust spacing between items */
+}
+
+@media screen and (max-width: 768px) {
+  .icon-item {
+    flex-basis: 45%; /* Adjust width for smaller screens */
+  }
+}
+
+.navbar {
+  background-color: #333; /* Set background color for navbar */
+  position: fixed; /* Fix the navbar at the top of the viewport */
+  width: 100%;
+  z-index: 1;
+}
+
+@media screen and (max-width: 768px) {
+  /* Add margin-top for smaller screens */
+  .header {
+    margin-top: 20px; /* Adjust as needed */
+  }
 }
