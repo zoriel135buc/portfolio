@@ -25,6 +25,15 @@
   margin-top: 55px; /* Adjust margin-top to create space for the fixed navbar */
   min-height: 100vh; /* Ensure the container takes up at least the full height of the viewport */
 }
+.post {
+  position: relative;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  overflow: hidden;
+  margin-top: 55px;
+  min-height: 100vh;
+}
 .content {
   position: absolute;
   top: 50%;
@@ -70,7 +79,25 @@
   font-size: 2rem;
   text-align: center;
 }
+.postP {
+  display: flex;
+  flex-direction: column;
+  max-width: 1200px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 20px;
+  order: 1;
+}
 
+.postP h2 {
+  padding: 0px;
+  padding-top: 30px;
+  margin: 10px;
+  font-size: 40px;
+  font-weight: bolder;
+  text-align: center;
+  order: 0;
+}
 .contP h2 {
   padding: 40px;
   padding-top: 10px;
