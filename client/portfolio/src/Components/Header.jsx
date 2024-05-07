@@ -5,7 +5,7 @@ import "../App.css";
 const Header = () => {
   return (
     <header className="header">
-      <p style={{ color: "blueviolet" }}>
+      <p style={{ color: " burlywood" }}>
         Hi, I'm <strong>Zoriel</strong>, a Software Engineer with a passion for
         crafting exceptional front-end experiences. Currently based in{" "}
         <span></span>
